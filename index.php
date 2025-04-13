@@ -21,8 +21,7 @@
             <div class="card shadow">
                 <div class="card-body shadow">
                     <h1>SIGNIN</h1>
-                    <button class="slidebutton btn position-absolute top-0 end-0 mt-4 me-3" onclick="MoveToSignUp()">Don't Have a Account</button>
-                    <form onsubmit="return validation()" action="" method="post">
+                    <form onsubmit="return validation_signin()" action="" method="post">
                         <div class="form-group my-3">
                             <label for="email">Email:</label>
                             <input id="inemail" class="form-control" type="email" name="email" placeholder="Enter Your Email">
@@ -30,10 +29,11 @@
                         </div>
                         <div class="form-group my-3">
                             <label for="password">Password:</label>
-                            <input id="inpassword" class="form-control" type="password" name="password" placeholder="Enter Your Password">
+                            <input id="inpassword" class="form-control" type="password" name="password" placeholder="Enter Your Password" maxlength="15">
                             <div class="error"></div>
                         </div>
                         <input class="btn btn-primary my-2" type="submit" value="SIGNIN">
+                        <button class="slidebutton btn ms-5" onclick="MoveToSignUp()">Don't Have a Account</button>
                     </form>
                 </div>
             </div>
@@ -47,11 +47,10 @@
             <div class="card shadow">
                 <div class="card-body shadow">
                     <h1>SIGNUP</h1>
-                    <button class="slidebutton btn position-absolute top-0 end-0 mt-4 me-3" onclick="MoveToSignIn()">Have a Account</button>
-                    <form action="">
+                    <form action="" onsubmit="return validation_signup()">
                     <div class="form-group my-3">
                             <label for="name">Name</label>
-                            <input id="upname" class="form-control" type="text" name="name" placeholder="Enter Your Name">
+                            <input id="upname" class="form-control" type="text" name="name" placeholder="Enter Your Name" maxlength="50">
                             <div class="error"></div>
                         </div>
                         <div class="form-group my-3">
@@ -69,7 +68,8 @@
                             <input id="upc_password" class="form-control" type="password" name="c_password" placeholder="Enter Again Password">
                             <div class="error"></div>
                         </div>
-                        <input class="btn btn-primary my-2" type="button" value="SIGNIN">
+                        <input class="btn btn-primary my-2" type="submit" value="SIGNUP">
+                        <button class="slidebutton btn ms-5" onclick="MoveToSignIn()">Have a Account</button>
                     </form>
                 </div>
             </div>

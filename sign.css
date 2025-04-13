@@ -9,7 +9,7 @@
     position: fixed;
     z-index: 101;
     display: none;
-    top: 30%;
+    top: 20%;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -18,13 +18,13 @@
     position: fixed;
     z-index: 102;
     display: block;
-    top: 30%;
+    top: 25%;
     left: 50%;
     transform: translateX(-50%);
 }
 
 .error{
-    font-size:large;
+    font-size:small;
     color: red;
 }
 .slidebutton{
