@@ -1,0 +1,42 @@
+.header{
+    font-family: 'Times New Roman', Times, serif;
+}
+.overlay{
+    z-index: 100;
+    display: none;
+}
+.signup {
+    position: fixed;
+    z-index: 101;
+    display: none;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.signin {
+    position: fixed;
+    z-index: 102;
+    display: block;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.error{
+    font-size:large;
+    color: red;
+}
+.slidebutton{
+    display: inline-block;
+}
+.slidebutton:hover {
+    color: rgb(55, 126, 231) !important;
+    background-color: blue;
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: none !important;
+}
+.slidebutton.btn:focus{
+    border: none !important;
+}

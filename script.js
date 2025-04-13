@@ -29,7 +29,6 @@ function save(){
         in_email.value = "Empty";
     }
 
-    
     var box=document.createElement("div")
     box.className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 my-3"
 
@@ -129,30 +128,36 @@ function previous_error_clear(){
           
 
 
-//search//
+// ===== SEARCH FUNCTIONALITY ===== //
 document.getElementById("searchForm").addEventListener("submit", function(e) {
-    e.preventDefault()
-    searchContacts()
-})
+    e.preventDefault();
+    searchContacts();
+});
 
-const searchInput = document.getElementById("searchInput")
-
-searchInput.addEventListener("input", searchContacts)
+document.getElementById("searchInput").addEventListener("input", searchContacts);
 
 function searchContacts() {
-    const searchText = searchInput.value.toLowerCase()
-    const contactContainers = document.querySelectorAll("#main-box > div")
+    const searchText = document.getElementById("searchInput").value.toLowerCase();
+    const contactContainers = document.querySelectorAll("#main-box > div");
     
     contactContainers.forEach(container => {
         const card = container.querySelector(".card");
-        const name = card.querySelector("p").textContent.toLowerCase()
-        const phone = card.querySelectorAll("p")[1].textContent.toLowerCase()
-        const email = card.querySelectorAll("p")[2].textContent.toLowerCase()
+        const name = card.querySelector("p").textContent.toLowerCase();
+        const phone = card.querySelectorAll("p")[1].textContent.toLowerCase();
+        const email = card.querySelectorAll("p")[2].textContent.toLowerCase();
         
         if (name.includes(searchText) || phone.includes(searchText) || email.includes(searchText)) {
-            container.style.display = "block"
+            container.style.display = "block";
         } else {
-            container.style.display = "none"
+            container.style.display = "none";
         }
-    })
+    });
 }
+
+// ===== SAVE BUTTON HANDLER ===== //
+document.getElementById("saveButton").addEventListener("click", function(e) {
+    e.preventDefault();
+    if(validation()) {
+        document.forms[0].submit();
+    }
+});
