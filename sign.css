@@ -9,7 +9,7 @@
     position: fixed;
     z-index: 101;
     display: none;
-    top: 20%;
+    top: 18%;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -18,7 +18,7 @@
     position: fixed;
     z-index: 102;
     display: block;
-    top: 25%;
+    top: 18%;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -39,4 +39,14 @@
 }
 .slidebutton.btn:focus{
     border: none !important;
+}
+.eye{
+    top: 60%; 
+    right: 15px; 
+    transform: translateY(-50%); 
+    cursor: pointer;
+}
+.signin, .signup {
+    padding: 15px;
+    width: 90%;
 }

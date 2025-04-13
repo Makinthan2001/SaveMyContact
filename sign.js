@@ -6,21 +6,19 @@ function MoveToSignUp(){
     overlay.style="display:block"
     signup.style="display:block"
     signin.style="display:none"
+    previous_error_clear()
 }
 function MoveToSignIn(){
     overlay.style="display:none"
     signup.style="display:none"
     signin.style="display:block"
+    previous_error_clear()
 }
 
 
 function validation_signin(){
     var inemail=document.getElementById("inemail")
     var inpassword=document.getElementById("inpassword")
-    var upname=document.getElementById("upname")
-    var upemail=document.getElementById("upemail")
-    var uppassword=document.getElementById("uppassword")
-    var upc_password=document.getElementById("upc_password")
 
     var isvalid=true
     var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{3,63}$/;
@@ -77,7 +75,7 @@ function validation_signup(){
     if(upemail.value==""){
         upemail.closest(".form-group").querySelector(".error").textContent="Email Can't be Empty"
         upemail.style.border="1px solid red"
-        upvalid=false
+        isvalid=false
     }
     else if(!emailPattern.test(upemail.value.trim())){
         upemail.closest(".form-group").querySelector(".error").textContent="Enter Valid Email"
@@ -119,5 +117,40 @@ function validation_signup(){
     }
     
     return isvalid
+}
+
+function previous_error_clear(){
+    inemail.value=""
+    inpassword.value=""
+    upname.value=""
+    upemail.value=""
+    uppassword.value=""
+    upc_password.value=""
+    inemail.closest(".form-group").querySelector(".error").textContent = ""
+    inemail.style.border = ""
+    inpassword.closest(".form-group").querySelector(".error").textContent = ""
+    inpassword.style.border = ""
+    upname.closest(".form-group").querySelector(".error").textContent = ""
+    upname.style.border = ""
+    upemail.closest(".form-group").querySelector(".error").textContent = ""
+    upemail.style.border = ""
+    uppassword.closest(".form-group").querySelector(".error").textContent = ""
+    uppassword.style.border = ""
+    upc_password.closest(".form-group").querySelector(".error").textContent = ""
+    upc_password.style.border = ""
+}
+
+function togglePassword(id, iconId) {
+    const field = document.getElementById(id);
+    const icon = document.getElementById(iconId);
+    if (field.type === "password") {
+        field.type = "text";
+        icon.classList.remove("bi-eye-slash-fill");
+        icon.classList.add("bi-eye-fill");
+    } else {
+        field.type = "password";
+        icon.classList.remove("bi-eye-fill");
+        icon.classList.add("bi-eye-slash-fill");
+    }
 }
 
