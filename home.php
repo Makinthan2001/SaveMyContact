@@ -2,7 +2,7 @@
     include("database.php");
     include("homehtml.php");
 
-    if(isset($_POST["submit"])){
+    /*if(isset($_POST["submit"])){
         mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
         $name=$_POST["name"];
@@ -15,5 +15,5 @@
         $stmt->bind_param("ssss",$name,$phonenumber,$email,$address);
         $stmt->execute();
         $stmt->close();
-    }
+    }*/
 ?>
