@@ -1,4 +1,4 @@
-<!--<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
 </head>
-<body class="bg-light hv-100">
+<body class="bg-light">
 <header class="p-3 sticky-top header bg-dark text-light">
         <div class="row">
             <div class="col">
@@ -18,32 +18,6 @@
         </div>
     </header>
 
-    <div class="row d-flex justify-content-center">
-        <div class="signin col-12 col-sm-6 col-md-6 col-lg-4">
-            <div class="card shadow">
-                <div class="card-body shadow">
-                    <h1>SIGNIN</h1>
-                    <form onsubmit="return validation_signin()" action="index.php" method="post">
-                        <div class="form-group my-3">
-                            <label for="email">Email:</label>
-                            <input id="inemail" class="form-control" type="text" name="email" placeholder="Enter Your Email">
-                            <div class="error"></div>
-                        </div>
-                        <div class="form-group my-3 position-relative">
-                            <label for="inpassword">Password</label>
-                            <input type="password" class="form-control" id="inpassword" placeholder="Enter Your Password" name="inpassword">
-                            <i id="toggleSigninPass" class=" eye bi bi-eye-slash-fill position-absolute" onclick="togglePassword('inpassword', 'toggleSigninPass')"></i>
-                            <div class="error"></div>
-                        </div>
-                        <input class="btn btn-primary my-2" type="submit" value="SIGNIN">
-                        <button type="button" class="slidebutton btn ms-5" onclick="MoveToSignUp()">Don't Have an Account?</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="overlay bg-light w-100 h-100 top-0 start-0 bottom-0 p-0 m-0 position-fixed"></div>
 
     <div class="row d-flex justify-content-center">
         <div class="signup col-12 col-sm-6 col-md-6 col-lg-4">
@@ -73,8 +47,8 @@
                             <i id="toggleUpCPass" class=" eye bi bi-eye-slash-fill position-absolute" onclick="togglePassword('upc_password', 'toggleUpCPass')"></i>
                             <div class="error"></div>
                         </div>
-                        <input class="btn btn-primary my-2" type="submit" value="SIGNUP">
-                        <button type="button" class="slidebutton btn ms-5" onclick="MoveToSignIn()">Already have an account?</button>
+                        <input class="btn btn-primary my-2" type="submit" name="submit" value="SIGNUP">
+                        <a class="slidebutton text-decoration-none ms-5" href="signinhtml.php">Already have an account?</a>
                     </form>
                 </div>
             </div>
@@ -83,4 +57,4 @@
     
     <script src="sign.js"></script>
 </body>
-</html>-->
+</html>

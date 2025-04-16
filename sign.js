@@ -1,20 +1,3 @@
-var signin=document.querySelector(".signin")
-var signup=document.querySelector(".signup")
-var overlay=document.querySelector(".overlay")
-
-function MoveToSignUp(){
-    overlay.style="display:block"
-    signup.style="display:block"
-    signin.style="display:none"
-    previous_error_clear()
-}
-function MoveToSignIn(){
-    overlay.style="display:none"
-    signup.style="display:none"
-    signin.style="display:block"
-    previous_error_clear()
-}
-
 
 function validation_signin(){
     var inemail=document.getElementById("inemail")
@@ -92,7 +75,7 @@ function validation_signup(){
         isvalid=false
     }
     else if(uppassword.value.trim().length<8 || uppassword.value.trim().length>15){
-        uppassword.closest(".form-group").querySelector(".error").textContent="Password length should be from 7 to 15 digits"
+        uppassword.closest(".form-group").querySelector(".error").textContent="Password length should be from 8 to 15 digits"
         uppassword.style.border="1px solid red"
         isvalid=false
     }
@@ -117,27 +100,6 @@ function validation_signup(){
     }
     
     return isvalid
-}
-
-function previous_error_clear(){
-    inemail.value=""
-    inpassword.value=""
-    upname.value=""
-    upemail.value=""
-    uppassword.value=""
-    upc_password.value=""
-    inemail.closest(".form-group").querySelector(".error").textContent = ""
-    inemail.style.border = ""
-    inpassword.closest(".form-group").querySelector(".error").textContent = ""
-    inpassword.style.border = ""
-    upname.closest(".form-group").querySelector(".error").textContent = ""
-    upname.style.border = ""
-    upemail.closest(".form-group").querySelector(".error").textContent = ""
-    upemail.style.border = ""
-    uppassword.closest(".form-group").querySelector(".error").textContent = ""
-    uppassword.style.border = ""
-    upc_password.closest(".form-group").querySelector(".error").textContent = ""
-    upc_password.style.border = ""
 }
 
 function togglePassword(id, iconId) {
