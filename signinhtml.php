@@ -1,3 +1,9 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+$error = $_SESSION["error"] ?? "";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,7 +42,15 @@
                             <div class="error"></div>
                         </div>
                         <input class="btn btn-primary my-2" type="submit" name="submit" value="SIGNIN">
-                        <a class="slidebutton text-decoration-none ms-5" href="signuphtml.php">Don't Have an Account?</a>
+                        <p class="error mt-1">
+                            <?php 
+                                if(isset($error)){
+                                    echo $error;
+                                    unset($_SESSION["error"]);
+                                }
+                            ?>
+                        </p>
+                        <a class="slidebutton text-decoration-none" href="signuphtml.php">Don't Have an Account?</a>
                     </form>
                 </div>
             </div>
