@@ -19,7 +19,9 @@
                 <nav>
                     <ul class="list-inline">
                         <li class="list-inline-item">
-                            <a class="text-decoration-none text-light me-3" href="#">Logout</a>
+                            <form action="home.php" method="post">
+                                <input class="logoutbtn btn btn-primary text-light" type="submit" name="submit" value="Logout">
+                            </form>
                         </li>
                     </ul>
                 </nav>      
@@ -118,7 +120,7 @@
         <div class="row d-flex justify-content-center">
             <div class="col-12 col-md-6 card p-2">
                 <h3>Enter Contact Details</h3>
-                <form action="index.php" method="post">
+                <form action="home.php" method="post">
                     <div class="form-group mb-2">
                         <label for="">Name:</label>
                         <input id="in_name" class="form-control" type="text" name="name" placeholder="Enter The name" maxlength="50">
@@ -138,7 +140,7 @@
                         <label for="">Address:</label>
                         <input id="in_address" class="form-control" type="text" name="address" placeholder="Enter The Address (optional)" maxlength="50">
                     </div>
-                    <button class="btn btn-primary mt-3 me-3" type="submit" name="submit">Save</button>
+                    <button class="btn btn-primary mt-3 me-3" type="button" name="submit" onclick="save()">Save</button>
                     <button class="btn btn-primary mt-3 ms-3" type="button" onclick="cancel()">Cancel</button>
                 </form>
             </div>

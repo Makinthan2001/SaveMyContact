@@ -8,10 +8,10 @@ html, body {
 .header ul li{
     font-size: 1.3rem;
 }
-.header a {
+.logoutbtn {
     display: inline-block;
 }
-.header a:hover {
+.logoutbtn:hover {
     color: rgb(55, 126, 231) !important;
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out;

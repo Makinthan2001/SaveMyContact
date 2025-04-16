@@ -17,6 +17,9 @@ session_start();
                 $hash_password=$row["password"];
         
                 if(password_verify($password,$hash_password)){
+                    session_regenerate_id(true);
+                    $_SESSION['user_id'] = $row['id'];
+                    $_SESSION['user_email'] = $row['email'];
                     header("Location: home.php");
                     exit();
                 }else{

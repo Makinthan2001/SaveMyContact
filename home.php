@@ -1,5 +1,5 @@
 <?php
-    include("database.php");
+    //include("database.php");
     include("homehtml.php");
 
     /*if(isset($_POST["submit"])){

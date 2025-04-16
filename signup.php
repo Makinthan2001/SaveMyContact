@@ -9,6 +9,7 @@
         $password=$_POST["password"];
         $hash=password_hash("$password",PASSWORD_DEFAULT);
         mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+        
 
         try{
             $stmt=$conn->prepare("insert into users (name,email,password)
