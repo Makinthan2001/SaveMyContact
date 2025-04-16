@@ -12,7 +12,7 @@ html, body {
     display: inline-block;
 }
 .logoutbtn:hover {
-    color: rgb(55, 126, 231) !important;
+    background-color: blue;
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out;
 }
@@ -77,6 +77,21 @@ h4{
     
 }
 .are-you-sure button:hover{
+    background-color: rgb(0, 47, 255);
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+.are-you-sure-logout{
+    text-align: center;
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 1001;
+}
+.are-you-sure-logout button:hover{
     background-color: rgb(0, 47, 255);
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out;

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SaveMyContact</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
@@ -19,9 +19,7 @@
                 <nav>
                     <ul class="list-inline">
                         <li class="list-inline-item">
-                            <form action="home.php" method="post">
-                                <input class="logoutbtn btn btn-primary text-light" type="submit" name="submit" value="Logout">
-                            </form>
+                            <button class="logoutbtn btn btn-primary text-light" onclick="show_logout()">Logout</button>
                         </li>
                     </ul>
                 </nav>      
@@ -152,6 +150,23 @@
                 <h3>Delete Contact?</h3>
                 <button class="btn btn-primary mt-3 mx-3" onclick="delete_yes()">Delete</button>
                 <button class="btn btn-primary mt-3 mx-3" onclick="hide_are_you_sure()">Cancel</button>
+            </div>
+        </div>    
+    </div>
+    <div class=" are-you-sure-logout container">
+        <div class="row d-flex justify-content-center">
+            <div class="col-6 col-md-3 card p-2 bg-dark text-light">
+                <h3 class="text-center">Are You Sure?</h3>
+                <form action="home.php" method="post">
+                    <div class="row">
+                        <div class="col-12 d-flex justify-content-center">
+                            <button class="btn btn-primary mt-3" type="submit" name="logout" onclick="">Logout</button>
+                        </div>
+                        <div class="col-12 d-flex justify-content-center">
+                            <button class="btn btn-primary mt-3" type="button" onclick="hide_logout()">Cancel</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>    
     </div>

@@ -1,5 +1,6 @@
 var _overlay=document.querySelector(".overlay")
 var _popup_box=document.querySelector(".popup-box")
+var _show_logout=document.querySelector(".are-you-sure-logout")
 var _are_you_sure=document.querySelector(".are-you-sure")
 var main_box=document.getElementById("main-box")
 var in_name=document.getElementById("in_name")
@@ -71,6 +72,17 @@ function delete_yes(){
     _are_you_sure.style.display = "none";
     _overlay.style.display = "none";
 }
+
+function show_logout(){
+    _show_logout.style.display="block"
+    _overlay.style.display = "block"
+}
+function hide_logout(){
+    _overlay.style.display="none"
+    _show_logout.style.display="none"
+}
+
+
 
 function validation(){
     var isvalid=true;
