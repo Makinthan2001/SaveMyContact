@@ -172,6 +172,6 @@
     </div>
     
     
-    <script src="script.js"></script>
+    <script src="home.js"></script>
 </body>
 </html>
