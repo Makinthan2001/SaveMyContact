@@ -17,7 +17,7 @@
             $stmt->bind_param("sss",$name,$email,$hash);
         
             if($stmt->execute()){
-                $_SESSION["$error"]="";
+                $_SESSION["error"]="";
                 header("Location: home.php");
                 exit();
             }
